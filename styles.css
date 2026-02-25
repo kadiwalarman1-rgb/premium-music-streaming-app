@@ -1,0 +1,81 @@
+.sidebar {
+    background-color: #121212;
+    color: #ffffff;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    transition: width 0.3s;
+}
+
+.sidebar:hover {
+    width: 300px;
+}
+
+.player {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.playlist {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.progress-bar {
+    background-color: #333;
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.progress {
+    background-color: #ff4081;
+    height: 100%;
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 5px;
+    background: #555;
+    border-radius: 5px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    background: #ff4081;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .player {
+        flex-direction: column;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade {
+    animation: fadeIn 0.5s ease;
+}

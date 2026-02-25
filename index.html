@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Music Streaming App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <div class="sidebar">
+        <h2>Premium Music</h2>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#playlists">Playlists</a></li>
+                <li><a href="#now-playing">Now Playing</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <header>
+            <input type="text" id="search-bar" placeholder="Search for songs, artists, albums...">
+        </header>
+        <section id="now-playing">
+            <h3>Now Playing</h3>
+            <p id="current-song">Song Title - Artist</p>
+            <div class="player-controls">
+                <button id="prev">&#9664;</button>
+                <button id="play-pause">&#9654;</button>
+                <button id="next">&#9654;&#9654;</button>
+            </div>
+            <div class="progress-container">
+                <input type="range" id="progress-bar" value="0" />
+                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            </div>
+            <div class="volume-controls">
+                <input type="range" id="volume-control" value="50" />
+            </div>
+        </section>
+        <section id="playlists">
+            <h3>Your Playlists</h3>
+            <div class="playlist-management">
+                <button id="add-playlist">+ Add Playlist</button>
+                <ul id="playlist-list">
+                    <!-- Playlist items will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
